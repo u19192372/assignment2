@@ -25,10 +25,8 @@
    <!-- bootstrap modal -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-
-
-
 </head>
+
 <body>
     <!-- nav bar -->
     <div class="navbar">
@@ -36,7 +34,9 @@
         <a class="active" href="index.html"><i class="bi bi-film"></i> Home</a>
         
         
-      <a class="active" href="cart.html"> <i class="bi bi-cart"> cart</i></a>
+        <a class="active" href="cart.html"> <i class="bi bi-cart"> cart</i></a>
+
+        <h1 id="Ticket-Count">  0 </h1>
 
     </div>
 
@@ -46,27 +46,27 @@
     <hr>
 
 
-    <!--  card 1 -->
-<div class="container-fluid padding">
-<div class="row padding">
-<div class="col-sm-3">
-<div class="card">
-    <h3>Cinema 1</h3> 
-    <img  class = " card-img-top"src=" images/call.jpg" alt=" poster of  'call' the movie" >
- <div class=" card-body"></div>
- <h4 class="title"> Call</h4>
- <p class="description"> Connected by phone in the same home but 20 years apart, a serial killer puts another woman's past -- and life -- on the line to change her own fate.</p>
-<!-- container modal 1 -->
+        <!--  card 1 -->
+    <div class="container-fluid padding">
+    <div class="row padding">
+    <div class="col-sm-3">
+    <div class="card">
+        <h3>Cinema 1</h3> 
+        <img  class = " card-img-top"src=" images/call.jpg" alt=" poster of  'call' the movie" >
+    <div class=" card-body"></div>
+    <h4 class="title"> Call</h4>
+    <p class="description"> Connected by phone in the same home but 20 years apart, a serial killer puts another woman's past -- and life -- on the line to change her own fate.</p>
+    <!-- container modal 1 -->
 
-<!-- <div class="container">  -->
+    <!-- <div class="container">  -->
 
-    <div class="container">
-    
+        <div class="container">
+        
         <!-- Trigger the modal with a button -->
- <button class=" btn btn-outline-secondary"  data-toggle="modal" data-target="#myModal" > show details</button>
+    <button class=" btn btn-outline-secondary"  data-toggle="modal" data-target="#myModal" > show details</button>
  
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
         
       <!-- Modal content-->
@@ -94,15 +94,9 @@
     
   </div>
 
-<button id="movie1"> Book ticket </button>
-</div>
-</div>
-
-
-
-
-
-
+  <button onclick="addTicket()"> Book ticket </button>
+  </div>
+  </div>
 
 <!-- card 2 -->
 <div class="col-sm-3">
@@ -113,7 +107,6 @@
      <h4 class="title"> fractured</h4>
      <p class="description"> After his wife and injured daughter disappear from the emergency room, a man becomes convinced the hospital is hiding something.</p>
      <!-- container modal 2 -->
-
 
     <div class="container">
            <!-- Trigger the modal with a button -->
@@ -145,7 +138,7 @@
         
       </div>
      
-     <button> Book ticket </button>
+     <button onclick="addTicket()"> Book ticket </button>
    
     </div>
     </div>
@@ -190,7 +183,7 @@
         
       </div>
     
-    <button> Book ticket </button>
+    <button onclick="addTicket()"> Book ticket </button>
     </div>
     </div>
 <!-- card 4 -->
@@ -234,23 +227,12 @@
      
    </div>
    
-   
-   
-     
-    <button> Book ticket </button>
+    <button onclick="addTicket()"> Book ticket </button>
     </div>
     </div>
 
 </div>
 </div>
-
-
-
-
-
-
-
-    
 
 </body>
 
