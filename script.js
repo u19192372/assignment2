@@ -26,7 +26,9 @@
             document.getElementById("Ticket-Count").innerHTML = totalTicketNumber; // sets the ticket count to the recently decreased count
           }
     
-
+function TotalPrice(){
+    // calculate TotalPrice of tickets in cart 
+}
 
     
   
