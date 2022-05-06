@@ -27,18 +27,18 @@ window.onload = function() {
             "ticket_price": 10, 
             "tickets_in_cart": 0 
         },
-        // {
-        //     "id": 2, 
-        //     "title": "Fractured", 
-        //     "director": "Brad Anderson", 
-        //     "runtime": "1Hr 40min", 
-        //     "release_year": 2019, 
-        //     "description": "After his wife and injured daughter disappear from the emergency room, a man becomes convinced the hospital is hiding something.", 
-        //     "poster_url": "./images/fractured.jpg", 
-        //     "cinema_number": 2, 
-        //     "ticket_price": 15, 
-        //     "tickets_in_cart": 0 
-        // },
+        {
+            "id": 2, 
+            "title": "Fractured", 
+            "director": "Brad Anderson", 
+            "runtime": "1Hr 40min", 
+            "release_year": 2019, 
+            "description": "After his wife and injured daughter disappear from the emergency room, a man becomes convinced the hospital is hiding something.", 
+            "poster_url": "./images/fractured.jpg", 
+            "cinema_number": 2, 
+            "ticket_price": 15, 
+            "tickets_in_cart": 0 
+        },
         // {
         //     "id": 3, 
         //     "title": "Sightless", 
@@ -63,22 +63,33 @@ window.onload = function() {
         //     "ticket_price": 10, 
         //     "tickets_in_cart": 0 
         // },
-        ];
+         ];
 
-        console.log(movies);
-        populateHtmlDetails();
+        //  console.log(movies);
+        // populateHtmlDetails();
 
-        function populateHtmlDetails(){
+        // function populateHtmlDetails(){
             //loop throught the movies array
             //and populate the html card with a movie object
-            movies.forEach(
-                movie => document.getElementById("cinema-id").innerHTML = "Cinema " + movie.cinema_number,
+        //     movies.forEach(
+        //         movie => document.getElementById("cinema-id").innerHTML = "Cinema " + movie.cinema_number,
                
                 
-                )
-                console.log(movie);
+        //         )
+        //         console.log(movie);
+
+        // }
+        for( i=0; i< movies.length; i++){
+             document.getElementById('movie-title').innerHTML= movies[i].title
+             document.getElementById( "cinema-id").innerHTML= "Cinema"+ movies[i].cinema_number
+              document.getElementById('description').innerHTML= movies[i].description
+            document.getElementsByTagName('images').src= movies[i].poster_url
+           
 
         }
+       
+
+
 
         document.getElementById("hello").innerHTML = "Bonjour Text from JSs";
 
@@ -99,6 +110,10 @@ function TotalPrice(){
 }
 
 };
+
+
+//display table data
+
     
     
   
