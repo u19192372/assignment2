@@ -65,32 +65,22 @@ window.onload = function() {
         // },
          ];
 
-        //  console.log(movies);
-        // populateHtmlDetails();
-
-        // function populateHtmlDetails(){
-            //loop throught the movies array
-            //and populate the html card with a movie object
-        //     movies.forEach(
-        //         movie => document.getElementById("cinema-id").innerHTML = "Cinema " + movie.cinema_number,
-               
-                
-        //         )
-        //         console.log(movie);
-
-        // }
+      
         for( i=0; i< movies.length; i++){
+            //Set home page movie card data
              document.getElementById('movie-title').innerHTML= movies[i].title
-             document.getElementById( "cinema-id").innerHTML= "Cinema"+ movies[i].cinema_number
+             document.getElementById( "cinema-id").innerHTML= "Cinema "+ movies[i].cinema_number
               document.getElementById('description').innerHTML= movies[i].description
-            document.getElementsByTagName('images').src= movies[i].poster_url
-           
+            document.getElementById('img-card').src= movies[i].poster_url
 
+            //Set Modal object data
+            document.getElementById('modal-title').innerHTML =  (movies[i].title);
+            document.getElementById('movie-title').innerHTML = "Title : " + (movies[i].title);
+            document.getElementById('director-name').innerHTML = "Director/s : " + (movies[i].director);
+            document.getElementById('runtime').innerHTML = "Runtime : " + (movies[i].runtime);
+            document.getElementById('release-year').innerHTML = "Release : " + (movies[i].release_year);
         }
        
-
-
-
         document.getElementById("hello").innerHTML = "Bonjour Text from JSs";
 
         function addTicket() {
@@ -105,9 +95,9 @@ window.onload = function() {
             document.getElementById("Ticket-Count").innerHTML = totalTicketNumber; // sets the ticket count to the recently decreased count
           }
     
-function TotalPrice(){
-    // calculate TotalPrice of tickets in cart 
-}
+            function TotalPrice(){
+                // calculate TotalPrice of tickets in cart 
+            }
 
 };
 
