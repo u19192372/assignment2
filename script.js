@@ -65,17 +65,21 @@ window.onload = function() {
         // },
          ];
 
+         let localStorageMovie = {} 
+
       
         for( i=0; i< movies.length; i++){
             //Set home page movie card data
-             document.getElementById('movie-title').innerHTML= movies[i].title
+             document.getElementById('main-movie-title').innerHTML= movies[i].title
              document.getElementById( "cinema-id").innerHTML= "Cinema "+ movies[i].cinema_number
               document.getElementById('description').innerHTML= movies[i].description
             document.getElementById('img-card').src= movies[i].poster_url
+            document.getElementById('main-movie-title').innerHTML = movies[i].title;
 
             //Set Modal object data
             document.getElementById('modal-title').innerHTML =  (movies[i].title);
-            document.getElementById('movie-title').innerHTML = "Title : " + (movies[i].title);
+
+            document.getElementById('modal-movie-title').innerHTML =  "Title : " + (movies[i].title);
             document.getElementById('director-name').innerHTML = "Director/s : " + (movies[i].director);
             document.getElementById('runtime').innerHTML = "Runtime : " + (movies[i].runtime);
             document.getElementById('release-year').innerHTML = "Release : " + (movies[i].release_year);
@@ -83,16 +87,29 @@ window.onload = function() {
        
         document.getElementById("hello").innerHTML = "Bonjour Text from JSs";
 
-        document.getElementById("add-ticked-btn").addEventListener("click", function addTicket() {
+        document.getElementById("add-ticket-btn").addEventListener("click", function addTicket() {
             let totalTicketNumber = document.getElementById("Ticket-Count").innerHTML; // gets the current ticket count
             totalTicketNumber++; // increases the ticket count by 1 
             document.getElementById("Ticket-Count").innerHTML = totalTicketNumber; // sets the ticket count to the recently decreased count
+
+            addLocatStorageData(2,25,2);
           });
 
         function addTicket() {
             let totalTicketNumber = document.getElementById("Ticket-Count").innerHTML; // gets the current ticket count
             totalTicketNumber++; // increases the ticket count by 1 
             document.getElementById("Ticket-Count").innerHTML = totalTicketNumber; // sets the ticket count to the recently decreased count
+          }
+
+          function addLocatStorageData(moviesInCart,TotalCost,numberInCart) {
+           // sets the ticket count to the recently decreased count
+           moviesInCart++;
+           TotalCost++;
+           numberInCart++;
+
+           console.log(moviesInCart);
+           console.log(TotalCost);
+           console.log(TotalCost);
           }
 
           function removeTicket() {
