@@ -40,6 +40,8 @@
 
     </div>
 
+    <h1 id="hello">  </h1>
+
     <!-- movies -->
     <div class="col-12"></div>
     <h1 class="display">MOVIES</h1>
@@ -47,191 +49,62 @@
 
 
         <!--  card 1 -->
+        <!-- You need a list of cards -->
     <div class="container-fluid padding">
-    <div class="row padding">
-    <div class="col-sm-3">
-    <div class="card">
-        <h3>Cinema 1</h3> 
-        <img  class = " card-img-top"src=" images/call.jpg" alt=" poster of  'call' the movie" >
-    <div class=" card-body"></div>
-    <h4 class="title"> Call</h4>
-    <p class="description"> Connected by phone in the same home but 20 years apart, a serial killer puts another woman's past -- and life -- on the line to change her own fate.</p>
-    <!-- container modal 1 -->
+      <div class="row padding">
+      <div class="col-sm-3">
+      <div class="card">
+          <h3 id="cinema-id"> </h3> 
+          <img  class = " card-img-top"src=" images/call.jpg" alt=" poster of  'call' the movie" >
+      <div class=" card-body"></div>
+      <h4 id="movie-title" class="title"> </h4>
+      <p class="description"> Connected by phone in the same home but 20 years apart, a serial killer puts another woman's past -- and life -- on the line to change her own fate.</p>
+      <!-- container modal 1 -->
 
-    <!-- <div class="container">  -->
+      <!-- <div class="container">  -->
 
-        <div class="container">
-        
-        <!-- Trigger the modal with a button -->
-    <button class=" btn btn-outline-secondary"  data-toggle="modal" data-target="#myModal" > show details</button>
- 
-  <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-        
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title" id="title1"> Call</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="container">
           
-        </div>
-        <div class="modal-body">
-            <table> <tr><td> Title: Call </td></tr> 
-                <tr> <td>Director  :Lee Chung-hyeon</td></tr> 
-                <tr> <td> Runtime: 1hr 52m </td></tr> 
-                <tr> <td>Release_year: 2020 </td></tr> 
-               </table>
+          <!-- Trigger the modal with a button -->
+      <button class=" btn btn-outline-secondary"  data-toggle="modal" data-target="#myModal" > show details</button>
+  
+    <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
           
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-
-  <button onclick="addTicket()"> Book ticket </button>
-  </div>
-  </div>
-
-<!-- card 2 -->
-<div class="col-sm-3">
-    <div class="card">
-        <h3>Cinema 2</h3> 
-        <img  class = " card-img-top"src=" images/fractured.jpg" alt=" poster of  'fractured' the movie"  id="fractured">
-     <div class=" card-body"></div>
-     <h4 class="title"> fractured</h4>
-     <p class="description"> After his wife and injured daughter disappear from the emergency room, a man becomes convinced the hospital is hiding something.</p>
-     <!-- container modal 2 -->
-
-    <div class="container">
-           <!-- Trigger the modal with a button -->
-     <button class=" btn btn-outline-secondary" data-toggle="modal" data-target="#myModal2" > show details</button>
-     <!-- Modal -->
-  <div class="modal fade" id="myModal2" role="dialog">
-    <div class="modal-dialog">
-     <!-- Modal content-->
-     <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title" id="title1"> Fractured</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-         
-        </div>
-        <div class="modal-body">
-            <table>   <tr> <td>Title: Fractured</td></tr>
-                <tr> <td>  Director  : Brad Anderson</td></tr>
-                <tr> <td> Runtime: 1hr 40m </td></tr>  
-                <tr> <td> Release_year: 2019</td></tr> 
-               </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title" id="title1"> Call</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
             
           </div>
-        </div>
-        
-      </div>
-     
-     <button onclick="addTicket()"> Book ticket </button>
-   
-    </div>
-    </div>
-<!-- card 3 -->
-<div class="col-sm-3">
-    <div class="card">
-        <h3>Cinema 3</h3> 
-        <img  class = " card-img-top"src=" images/sightless.jpg" alt=" poster of  'call' the movie" >
-     <div class=" card-body"></div>
-     <h4 class="title"> sightless</h4>
-     <p class="description"> After a vicious attack leaves a young woman blind, she must fight back to escape her new reality in which people are not who they seem to be.</p>
-    <!-- container modal 3 -->
-
-
-    <div class="container">
-           <!-- Trigger the modal with a button -->
-     <button class=" btn btn-outline-secondary" data-toggle="modal" data-target="#myModal3" > show details</button>
-     <!-- Modal -->
-  <div class="modal fade" id="myModal3" role="dialog">
-    <div class="modal-dialog">
-     <!-- Modal content-->
-     <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title" id="title1"> Sightless</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
-        </div>
-        <div class="modal-body">
-            <table>  <tr> <td> Title: Sightless </td></tr> 
-                <tr> <td> Director  :Cooper Karl</td></tr> 
-                <tr> <td> Runtime: 1hr 29m </td></tr>  
-                <tr> <td> Release_year: 2020 </td></tr> 
-               </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
+          <div class="modal-body">
+              <table> <tr><td> Title: Call </td></tr> 
+                  <tr> <td>Director  :Lee Chung-hyeon</td></tr> 
+                  <tr> <td> Runtime: 1hr 52m </td></tr> 
+                  <tr> <td>Release_year: 2020 </td></tr> 
+                </table>
             
           </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
         </div>
-        
       </div>
-    
-    <button onclick="addTicket()"> Book ticket </button>
+      
     </div>
-    </div>
-<!-- card 4 -->
-<div class="col-sm-3">
-    <div class="card">
-        <h3>Cinema 4</h3> 
-        <img  class = " card-img-top"src=" images/room.jpg" alt=" poster of  'call' the movie" >
-     <div class=" card-body"></div>
-     <h4 class="title"> room</h4>
-     <p class="description"> After years of being held captive in an isolated shed by a kidnapper, Joy and her little son, Jack, manage to escape the confinement and gain their freedom.</p>
-    <!-- container modal 4 -->
 
-
-    <div class="container">
-        <!-- Trigger the modal with a button -->
-  <button class=" btn btn-outline-secondary" data-toggle="modal" data-target="#myModal4" > show details</button>
-  <!-- Modal -->
-<div class="modal fade" id="myModal4" role="dialog">
- <div class="modal-dialog">
-  <!-- Modal content-->
-  <div class="modal-content">
-     <div class="modal-header">
-        <h4 class="modal-title" id="title1"> Room</h4>
-       <button type="button" class="close" data-dismiss="modal">&times;</button>
-       
-     </div>
-     <div class="modal-body">
-         <table> <tr> <td>  Title: Room</td></tr>  
-            <tr> <td>  Director  : Lenny Abrahamson</td></tr>  
-            <tr> <td>  Runtime: 1hr 58m  </td></tr> 
-            <tr> <td>  Release_year: 2015 </td></tr>
-            </table>
-         </div>
-         <div class="modal-footer">
-             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-           </div>
-         </div>
-         
-       </div>
-     </div>
-     
-   </div>
-   
     <button onclick="addTicket()"> Book ticket </button>
     </div>
     </div>
 
-</div>
+  <!-- card 2 -->
+
+
+  </div>
 </div>
 
 </body>
