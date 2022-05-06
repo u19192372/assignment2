@@ -83,6 +83,12 @@ window.onload = function() {
        
         document.getElementById("hello").innerHTML = "Bonjour Text from JSs";
 
+        document.getElementById("add-ticked-btn").addEventListener("click", function addTicket() {
+            let totalTicketNumber = document.getElementById("Ticket-Count").innerHTML; // gets the current ticket count
+            totalTicketNumber++; // increases the ticket count by 1 
+            document.getElementById("Ticket-Count").innerHTML = totalTicketNumber; // sets the ticket count to the recently decreased count
+          });
+
         function addTicket() {
             let totalTicketNumber = document.getElementById("Ticket-Count").innerHTML; // gets the current ticket count
             totalTicketNumber++; // increases the ticket count by 1 
