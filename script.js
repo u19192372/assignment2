@@ -1,18 +1,7 @@
 window.onload = function() {
-    // let movies = [
-    //     {
-    //         id: number, //a unique identifier for this movie
-    //         title: string, //the title of this movie
-    //         director: string, //the name of the director of this movie
-    //         runtime: string, //the runtime of this movie
-    //         release_year: number, //the year this movie was released
-    //         description: string, //a description of this movie
-    //         poster_url: string, //a URL or file path to an image of the poster for this movie
-    //         cinema_number: number, //the number of the cinema this movie will be showing in
-    //         ticket_price: number, //the price of a single ticket for this movie
-    //         tickets_in_cart: number //the number of tickets that have been booked for this movie
-    //     }
-    //     ];
+    
+    (function() {
+        let movieList = document.querySelector(".movie-list");
 
     let movies = [
         {
@@ -34,23 +23,23 @@ window.onload = function() {
             "runtime": "1Hr 40min", 
             "release_year": 2019, 
             "description": "After his wife and injured daughter disappear from the emergency room, a man becomes convinced the hospital is hiding something.", 
-            "poster_url": "./images/fractured.jpg", 
+            "poster_url":"./images/fractured.jpg", 
             "cinema_number": 2, 
             "ticket_price": 15, 
             "tickets_in_cart": 0 
         },
-        // {
-        //     "id": 3, 
-        //     "title": "Sightless", 
-        //     "director": "Cooper Karl", 
-        //     "runtime": "1Hr 29min", 
-        //     "release_year": 2020, 
-        //     "description": "After a vicious attack leaves a young woman blind, she must fight back to escape her new reality in which people are not who they seem to be.", 
-        //     "poster_url": "./images/sightless.jpg", 
-        //     "cinema_number": 3, 
-        //     "ticket_price": 15, 
-        //     "tickets_in_cart": 0 
-        // },
+        {
+            "id": 3, 
+            "title": "Sightless", 
+            "director": "Cooper Karl", 
+            "runtime": "1Hr 29min", 
+            "release_year": 2020, 
+            "description": "After a vicious attack leaves a young woman blind, she must fight back to escape her new reality in which people are not who they seem to be.", 
+            "poster_url": "./images/sightless.jpg", 
+            "cinema_number": 3, 
+            "ticket_price": 15, 
+            "tickets_in_cart": 0 
+        },
         // {
         //     "id": 4, 
         //     "title": "Room", 
@@ -64,6 +53,18 @@ window.onload = function() {
         //     "tickets_in_cart": 0 
         // },
          ];
+
+          //display list
+         
+            let movieItems = "";
+            for (movie1 of movies) {
+            // movieItems += "Cinema"+ movie1.cinema_number+ "&lt;li&gt;" + movie1.description+ "&lt;/li&gt;";
+            movieItems+=   "Cinema"+ movie1.cinema_number+  " "  +movie1.poster_url+  " " +movie1.title+  " " ; 
+            }
+        movieList.innerHTML = movieItems;
+        })();
+
+
 
       
         for( i=0; i< movies.length; i++){
@@ -108,8 +109,6 @@ window.onload = function() {
 };
 
 
-//display table data
 
-    
     
   
