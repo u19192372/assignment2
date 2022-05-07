@@ -1,5 +1,10 @@
+
+
+ var call= document.createElement('img')
+ call.src= "images/call.jpg"
 window.onload = function() {
-    
+   
+   
     (function() {
         let movieList = document.querySelector(".movie-list");
 
@@ -11,7 +16,7 @@ window.onload = function() {
             "runtime": "1Hr 52min", 
             "release_year": 2020, 
             "description": "Connected by phone in the same home but 20 years apart, a serial killer puts another woman's past -- and life -- on the line to change her own fate.", 
-            "poster_url": "./images/call.jpg", 
+            "poster_url":  document.appendChild(call), 
             "cinema_number": 1, 
             "ticket_price": 10, 
             "tickets_in_cart": 0 
@@ -53,13 +58,14 @@ window.onload = function() {
         //     "tickets_in_cart": 0 
         // },
          ];
-
+         var c = document.getElementById('title')
           //display list
          
             let movieItems = "";
             for (movie1 of movies) {
             // movieItems += "Cinema"+ movie1.cinema_number+ "&lt;li&gt;" + movie1.description+ "&lt;/li&gt;";
-            movieItems+=   "Cinema"+ movie1.cinema_number+  " "  +movie1.poster_url+  " " +movie1.title+  " " ; 
+            movieItems+=   "Cinema"+ movies.cinema_number+  
+             " "+ '<img src='+movies.poster_url+ ""+movies.title+  " "+movies.description+  " "  ; 
             }
         movieList.innerHTML = movieItems;
         })();
@@ -106,7 +112,11 @@ window.onload = function() {
                 // calculate TotalPrice of tickets in cart 
             }
 
-};
+ };
+            //    check if table is empty -->
+            if ($('#CartTable').length == 1) {
+                <tr> no movies in cart</tr>
+            }
 
 
 
