@@ -58,17 +58,26 @@ window.onload = function() {
         //     "tickets_in_cart": 0 
         // },
          ];
-         var c = document.getElementById('title')
+         var table = document.getElementById('table')
           //display list
          
-            let movieItems = "";
-            for (movie1 of movies) {
-            // movieItems += "Cinema"+ movie1.cinema_number+ "&lt;li&gt;" + movie1.description+ "&lt;/li&gt;";
-            movieItems+=   "Cinema"+ movies.cinema_number+  
-             " "+ '<img src='+movies.poster_url+ ""+movies.title+  " "+movies.description+  " "  ; 
+        //     let movieItems = "";
+        //     for (movie1 of movies) {
+        //     // movieItems += "Cinema"+ movie1.cinema_number+ "&lt;li&gt;" + movie1.description+ "&lt;/li&gt;";
+        //     movieItems+=   "Cinema"+ movies.cinema_number+  
+        //      " "+ '<img src='+movies.poster_url+ ""+movies.title+  " "+movies.description+  " "  ; 
+        //     }
+        // movieList.innerHTML = movieItems;
+        // })();
+         for (var i = 0; i < movies.length; i++) {
+            var newRow= table.insertRow(table.length); 
+            for (var j = 0; j < movies[i].length; j++) {
+                var cell= newRow.insertCell(j);
+                cell.innerHTML= movies[i][j];
+                
             }
-        movieList.innerHTML = movieItems;
-        })();
+             
+         }
 
 
 
