@@ -42,6 +42,10 @@ window.onload = function() {
            "./images/call.jpg", 1,  10, 0 )
       ];
 
+      let moviesAddedToCart = [];
+
+      let movieTotalCost = 0;
+
     // let movies = [
     //     {
     //         "id": 1, 
@@ -114,12 +118,23 @@ window.onload = function() {
         }
 
         document.getElementById("add-ticket-btn").addEventListener("click", function addTicket() {
-            newMovies.this;
+            let moveTitle = document.getElementById('main-movie-title').innerHTML;
+
+            let currentMovie = new Movie();
+            for(i=0; i<newMovies.length;i++){
+                if(newMovies[i].title == moveTitle) {
+                    newMovies[i].tickets_in_cart++;
+                    movieTotalCost += newMovies[i].ticket_price;
+                    currentMovie = newMovies[i];
+                    moviesAddedToCart.push(currentMovie)
+                }
+            }
+
             let totalTicketNumber = document.getElementById("Ticket-Count").innerHTML; // gets the current ticket count
             totalTicketNumber++; // increases the ticket count by 1 
             document.getElementById("Ticket-Count").innerHTML = totalTicketNumber; // sets the ticket count to the recently decreased count
 
-            addLocatStorageData(2,25,2);
+            addLocatStorageData(moviesAddedToCart,totalTicketNumber,movieTotalCost);
           });
 
         function addTicket() {
@@ -128,15 +143,15 @@ window.onload = function() {
             document.getElementById("Ticket-Count").innerHTML = totalTicketNumber; // sets the ticket count to the recently decreased count
           }
 
-          function addLocatStorageData(moviesInCart,TotalCost,numberInCart) {
+          function addLocatStorageData(movie, numberInCart, totalCost) {
            // sets the ticket count to the recently decreased count
-           moviesInCart++;
-           TotalCost++;
-           numberInCart++;
+           localStorage.setItem('moviesInCart', JSON.stringify(movie))
+           localStorage.setItem('totalCost', totalCost)
+           localStorage.setItem('numberInCart', numberInCart)
 
-           console.log(moviesInCart);
-           console.log(TotalCost);
-           console.log(TotalCost);
+           console.log(movie);
+           console.log(totalCost);
+           console.log(numberInCart);
           }
 
           function removeTicket() {
